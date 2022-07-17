@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.display_none {
+  display: none;
+}
+
+// 构建通用的常见 margin、pading 样式的 class
+$spaceTypes: (
+  m: margin,
+  p: padding,
+);
+
+$spaceDirections: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+$spaceSizes: (
+  0: 0,
+  4: 4px,
+  8: 8px,
+  10: 10px,
+  16: 16px,
+  20: 20px,
+  24: 24px,
+);
+
+@each $typeKey, $type in $spaceTypes {
+  @each $sizeKey, $size in $spaceSizes {
+    // mt0, mr0, mb0, ml0
+
+    @each $directionKey, $direction in $spaceDirections {
+      .#{$typeKey}#{$directionKey}#{$sizeKey} {
+        #{$type}-#{$direction}: $size;
+      }
+      // _i 表示添加 important
+      .#{$typeKey}#{$directionKey}#{$sizeKey}_i {
+        #{$type}-#{$direction}: $size !important;
+      }
+    }
+
+    // mx0, my0
+    .#{$typeKey}x#{$sizeKey} {
+      #{$type}-left: $size;
+      #{$type}-right: $size;
+    }
+    .#{$typeKey}y#{$sizeKey} {
+      #{$type}-top: $size;
+      #{$type}-bottom: $size;
+    }
+
+    // ma0
+    .#{$typeKey}a#{$sizeKey} {
+      #{$type}: $size;
+    }
+  }
+}

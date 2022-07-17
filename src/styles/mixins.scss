@@ -1,0 +1,19 @@
+// n行省略
+@mixin text-ellipsis($line: 2) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else if($line <= 0) {
+    @error "UnValid line #{$line}.";
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    //强行打断单词
+    word-break: break-all;
+  }
+}
