@@ -9,6 +9,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.30.6
   '@vitejs/plugin-react': ^2.0.0
   antd: ^4.21.6
+  consola: ^2.15.3
   dayjs: ^1.11.3
   eslint: ^8.19.0
   eslint-config-prettier: ^8.5.0
@@ -43,6 +44,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.30.6_b7n364ggt6o4xlkgyoaww3ph3q
   '@typescript-eslint/parser': 5.30.6_he2ccbldppg44uulnyq4rwocfa
   '@vitejs/plugin-react': 2.0.0_vite@3.0.2
+  consola: 2.15.3
   eslint: 8.20.0
   eslint-config-prettier: 8.5.0_eslint@8.20.0
   eslint-plugin-prettier: 4.2.1_g4fztgbwjyq2fvmcscny2sj6fy
@@ -992,6 +994,10 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    dev: true
+
+  /consola/2.15.3:
+    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
   /console/0.7.2:
