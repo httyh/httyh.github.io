@@ -1,11 +1,19 @@
-import { Button } from 'antd'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
+import Login from './pages/login'
+import Memorial from './pages/memorial'
+import Calendar from './pages/calendar'
+
+export default function App(): JSX.Element {
   return (
-    <div className='App'>
-      <Button>hello，钰涵</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/'>
+          <Route index element={<Login />} />
+          <Route path='memorial' element={<Memorial />} />
+          <Route path='calendar' element={<Calendar />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
