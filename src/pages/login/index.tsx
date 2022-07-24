@@ -1,9 +1,40 @@
-import { Button } from 'antd'
+import { Form, message } from 'antd'
+import styles from './styles.module.less'
 
 const Login = () => {
+  const onFinish = (values: any) => {
+    const { username, password } = values
+    if (username === 'yuhanbaobao' && password === '20220427') {
+      // ....
+    } else {
+      message.error('用户名或密码错误！')
+    }
+  }
+
   return (
-    <div>
-      <Button>hello，钰涵</Button>
+    <div className={styles.login}>
+      <div className={styles.login_cad}>
+        <Form
+          name='basic'
+          onFinish={onFinish}
+          autoComplete='off'
+          className={styles.form}
+        >
+          <Form.Item noStyle name='username'>
+            <input className={styles.input} maxLength={15} />
+          </Form.Item>
+
+          <Form.Item noStyle name='password'>
+            <input className={styles.input} maxLength={15} type='password' />
+          </Form.Item>
+
+          <Form.Item noStyle>
+            <button className={styles.button} type='submit'>
+              i am here 🐶
+            </button>
+          </Form.Item>
+        </Form>
+      </div>
     </div>
   )
 }

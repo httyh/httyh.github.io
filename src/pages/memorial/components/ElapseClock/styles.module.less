@@ -1,0 +1,44 @@
+.elapse_clock {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777777;
+  visibility: hidden;
+  opacity: 0;
+  .title {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .clock {
+    padding: 0 32px;
+  }
+
+  .number {
+    font-size: 24px;
+    padding: 0 8px;
+    font-weight: 500;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .author {
+    margin-top: 48px;
+    text-align: right;
+    padding-right: 32px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &.visible {
+    visibility: visible;
+    transition: 2s;
+    transition-delay: 1s;
+    opacity: 1;
+  }
+}

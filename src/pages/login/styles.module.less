@@ -1,0 +1,52 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("./images/bg.jpeg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.login_cad {
+  width: 520px;
+  padding: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: block;
+  width: 200px;
+  height: 32px;
+  margin-bottom: 24px;
+  outline: none;
+  border: none;
+  transition: 0.1s;
+  border-radius: 4px;
+  padding: 0 8px;
+  &:focus {
+    width: 240px;
+  }
+}
+
+.button {
+  display: block;
+  outline: none;
+  border: none;
+  width: 180px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #a0d911;
+  transition: 0.4s;
+  &:hover, &:focus {
+    background-color: #ffadd2;
+  }
+}
