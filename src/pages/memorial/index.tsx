@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useRef } from 'react'
 import Love from './components/Love'
-import ElapseClock from './components/ElapseClock'
+import ElapseClock, { ElapseClockRef } from './components/ElapseClock'
 import styles from './styles.module.less'
 
 const Memorial = () => {
-  const [visibleElapseClock, setVisibleElapseClock] = useState(false)
+  const elapseClockRef = useRef<ElapseClockRef>(null)
   const onAnimateEnd = () => {
-    setVisibleElapseClock(true)
+    elapseClockRef.current?.show()
   }
   return (
     <div className={styles.memorial}>
       <Love onAnimateEnd={onAnimateEnd}>
-        <ElapseClock visible={visibleElapseClock} />
+        <ElapseClock ref={elapseClockRef} />
       </Love>
     </div>
   )
