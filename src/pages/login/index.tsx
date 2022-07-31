@@ -1,11 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import { Form, message } from 'antd'
 import styles from './styles.module.less'
 
 const Login = () => {
+  const navigate = useNavigate()
   const onFinish = (values: any) => {
     const { username, password } = values
     if (username === 'yuhanbaobao' && password === '20220427') {
-      // ....
+      navigate('../memorial')
     } else {
       message.error('用户名或密码错误！')
     }
