@@ -4,7 +4,7 @@
   top: 46%;
   transform: translate(-50%, -50%);
   font-family: Arial, Helvetica, sans-serif;
-  color: #777777;
+  color: #000;
   visibility: hidden;
   opacity: 0;
   .title {
@@ -15,22 +15,28 @@
 
   .clock {
     padding: 0 32px;
+    white-space: nowrap;
   }
 
   .number {
     font-size: 24px;
-    padding: 0 8px;
+    padding: 0px 6px;
     font-weight: 500;
+    display: inline-block;
+    background-color: #fff;
+    color: #f759ab;
+    border-radius: 4px;
   }
 
   .text {
     font-size: 18px;
+    padding: 0px 6px;
   }
 
   .author {
     margin-top: 48px;
     text-align: right;
-    padding-right: 32px;
+    padding-right: 48px;
     font-size: 20px;
     font-weight: 600;
   }

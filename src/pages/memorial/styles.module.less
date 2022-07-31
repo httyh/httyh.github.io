@@ -2,11 +2,21 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  // background: url("./images/bg.jpeg") center center no-repeat;
-  // background-size: cover;
   position: relative;
-  background-color: #f6ffed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.next_icon {
+  padding: 4px 8px;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+  color: #9254de;
+  visibility: hidden;
+  cursor: pointer;
+  &.visible {
+    visibility: visible;
+  }
 }

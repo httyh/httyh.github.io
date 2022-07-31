@@ -5,6 +5,7 @@ import {
   createStyleImportPlugin,
   AntdResolve,
 } from 'vite-plugin-style-import'
+import md from "./plugins/vite-plugin-md"
 
 const resolve = (uri: string): string => path.resolve(__dirname, uri);
 
@@ -25,6 +26,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    md(),
     createStyleImportPlugin({
       resolves: [
         AntdResolve(),

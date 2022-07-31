@@ -1,4 +1,10 @@
-import { useEffect, useState, forwardRef, useImperativeHandle } from 'react'
+import {
+  useState,
+  forwardRef,
+  useImperativeHandle,
+  useEffect,
+  useRef,
+} from 'react'
 import dayjs from 'dayjs'
 import durationPlugin from 'dayjs/plugin/duration'
 import cls from 'classnames'
@@ -15,18 +21,20 @@ export type ElapseClockRef = { show: () => void }
 
 const ElapseClock = forwardRef<ElapseClockRef, {}>((_, ref) => {
   const [visible, setVisible] = useState(false)
+  const [durtion, setDurtion] = useState(timeDurtion)
+  const staticRef = useRef({ timer: 0 })
   useImperativeHandle(ref, () => ({
     show: () => {
+      staticRef.current.timer = window.setInterval(() => {
+        setDurtion(dayjs.duration(dayjs().diff(dayjs(startTime, format))))
+      }, 1000)
       setVisible(true)
     },
   }))
-  const [durtion, setDurtion] = useState(timeDurtion)
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDurtion(dayjs.duration(dayjs().diff(dayjs(startTime, format))))
-    }, 1000)
     return () => {
-      interval && clearInterval(interval)
+      staticRef.current.timer && clearInterval(staticRef.current.timer)
     }
   }, [])
   return (
