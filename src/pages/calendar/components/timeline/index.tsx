@@ -20,12 +20,16 @@ const Timeline = () => {
             key={`${item.id}${index}`}
             to={`./detail?id=${item.id}`}
           >
-            <div className={styles.timeline_item_content}>
-              <img src={styles.timeline_img} srcSet={item.mainImage} />
+            <div className={styles.timeline_item_body}>
+              <div
+                style={{ backgroundImage: `url(${item.mainImage})` }}
+                className={styles.timeline_img}
+              />
               <div className={styles.timeline_info}>
-                <div className={styles.timeline_title}>{item.title}</div>
-                <div className={styles.timeline_date}>{item.date}</div>
-                <div className={styles.timeline_desc}>{item.desc}</div>
+                <div className={styles.timeline_info_header}>
+                  {item.date} {item.title}
+                </div>
+                <div className={styles.timeline_info_desc}>{item.desc}</div>
               </div>
             </div>
           </Link>
