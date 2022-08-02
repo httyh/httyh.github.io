@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ant-design/icons': ^4.7.0
   '@types/markdown-it': ^12.2.3
   '@types/node': 18.0.6
   '@types/react': ^18.0.0
@@ -36,6 +37,7 @@ specifiers:
   vite-plugin-style-import: ^2.0.0
 
 dependencies:
+  '@ant-design/icons': 4.7.0_biqbaboplfbrettd7655fr4n2y
   antd: 4.21.7_biqbaboplfbrettd7655fr4n2y
   classnames: 2.3.1
   dayjs: 1.11.3

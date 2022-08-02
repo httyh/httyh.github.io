@@ -29,6 +29,7 @@
     padding-right: calc(50% + 80px);
     text-align: right;
     color: #000;
+    position: relative;
 
     &:nth-child(2n) {
       padding-right: 0;
@@ -82,5 +83,15 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
+  }
+
+  .heart_icon {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    font-size: 30px;
+    color: #ffccc7;
   }
 }

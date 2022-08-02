@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 
 import { useRecordDetail } from '../datas'
 
+import styles from './styles.module.less'
+
 const Detail = () => {
   const searchParams = useSearchParams()
   const id = searchParams[0].get('id') || ''
@@ -18,7 +20,11 @@ const Detail = () => {
 
   const Comp = data.Detail
 
-  return <Comp />
+  return (
+    <div className={styles.detail}>
+      <Comp />
+    </div>
+  )
 }
 
 export default Detail
