@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 import Login from './pages/login'
 import Memorial from './pages/memorial'
@@ -7,7 +7,7 @@ import CalendarDetail from './pages/calendar/detail'
 
 export default function App(): JSX.Element {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/'>
           <Route index element={<Login />} />
@@ -18,6 +18,6 @@ export default function App(): JSX.Element {
           </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
