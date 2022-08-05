@@ -12,8 +12,8 @@ import styles from './styles.module.less'
 
 dayjs.extend(durationPlugin)
 
-const startTime = '4-26-2022 21:30:00'
-const format = 'MM-DD-YYYY HH:mm:ss'
+const startTime = '4/26/2022 21:30:00'
+const format = 'MM/DD/YYYY HH:mm:ss'
 
 const timeDurtion = dayjs.duration(dayjs().diff(dayjs(startTime, format)))
 
